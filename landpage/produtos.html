@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- Diz ao navegador que este é um documento HTML5 -->
+<html lang="pt-br" data-page="catalog"> <!-- Início do HTML, idioma definido como português do Brasil, e atributo data-page usado pelo script.js para saber qual página está aberta -->
+<head>
+  <meta charset="utf-8" /> <!-- Define a codificação de caracteres como UTF-8 (suporta acentos e caracteres especiais) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Faz o site ser responsivo em celulares -->
+  <title>Produtos — EleckIO</title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Importa o arquivo de estilos CSS -->
+  <link rel="icon" href="img/logo-eleckio.png" /> <!-- Define o ícone (favicon) que aparece na aba do navegador -->
+</head>
+<body>
+  <!-- Cabeçalho fixo no topo -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="img/logo-eleckio.png" alt="EleckIO" height="48"> <!-- Logo da empresa -->
+    </div>
+    <nav class="nav"> <!-- Menu de navegação -->
+      <a href="index.html">Início</a> <!-- Link para a página inicial -->
+      <a href="produtos.html" class="active">Produtos</a> <!-- Link para a página de produtos (ativo) -->
+      <a href="index.html#contato">Contato</a> <!-- Link que leva ao rodapé da Home -->
+    </nav>
+  </header>
+
+  <main class="container"> <!-- Conteúdo principal da página -->
+    <!-- Banner no topo da página de produtos -->
+    <section class="hero">
+      <img src="img/banner.png" alt="EleckIO - Catálogo completo de produtos" /> <!-- Imagem do banner -->
+      <div class="hero-text"> <!-- Texto sobreposto ao banner -->
+        <h1>Confira nosso catálogo completo</h1> <!-- Título principal -->
+        <p>Ferramentas, materiais elétricos e suporte para quem faz acontecer.</p> <!-- Subtítulo -->
+        <a class="btn btn-primary" href="orcamento.html">Solicitar orçamento</a> <!-- Botão que leva para a página de orçamento -->
+      </div>
+    </section>
+
+    <h1>Produtos</h1> <!-- Título da seção de produtos -->
+
+    <!-- Abas de navegação entre Catálogo (cards) e Tabela -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="grid">Catálogo</button> <!-- Botão para ver os produtos em cards -->
+      <button class="tab-button" data-tab="table">Tabela</button> <!-- Botão para ver os produtos em tabela -->
+    </div>
+
+    <!-- Seção de catálogo em cards -->
+    <section id="tab-grid" class="tab active">
+      <div class="filters"> <!-- Filtros de busca -->
+        <input type="text" id="search" placeholder="Buscar por nome..." /> <!-- Campo de busca -->
+        <select id="category"> <!-- Filtro por categoria -->
+          <option value="">Todas as categorias</option>
+          <option value="Ferramentas">Ferramentas</option>
+          <option value="Materiais">Materiais</option>
+          <option value="Iluminação">Iluminação</option>
+          <option value="Proteção">Proteção</option>
+          <option value="Conexões">Conexões</option>
+          <option value="Eletrodutos">Eletrodutos</option>
+        </select>
+        <select id="sort"> <!-- Ordenação -->
+          <option value="">Ordenar</option>
+          <option value="price-asc">Preço: menor para maior</option>
+          <option value="price-desc">Preço: maior para menor</option>
+          <option value="name-asc">Nome: A-Z</option>
+          <option value="name-desc">Nome: Z-A</option>
+        </select>
+      </div>
+      <div id="products-grid" class="grid"></div> <!-- Aqui o script.js insere os cards dos produtos -->
+    </section>
+
+    <!-- Seção de tabela de produtos -->
+    <section id="tab-table" class="tab">
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Produto</th> <!-- Cabeçalho da coluna Produto -->
+              <th>Categoria</th> <!-- Cabeçalho da coluna Categoria -->
+              <th>Código</th> <!-- Cabeçalho da coluna Código -->
+              <th>Preço</th> <!-- Cabeçalho da coluna Preço -->
+              <th>Ações</th> <!-- Cabeçalho da coluna Ações (botões) -->
+            </tr>
+          </thead>
+          <tbody id="products-table"></tbody> <!-- Aqui o script.js insere as linhas da tabela -->
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé com informações de contato -->
+  <footer id="contato" class="footer">
+    <div class="footer-col">
+      <h3>Contato</h3>
+      <p><strong>Endereço:</strong> Rua Fictícia, 9999, centro</p>
+      <p><strong>Telefone:</strong> 16 99999-9999</p>
+      <p><strong>E-mail:</strong> eleckio@eleckio.com.br</p>
+      <p><strong>WhatsApp:</strong> (16) 98808-1614</p>
+    </div>
+    <div class="footer-col">
+      <h3>Serviços</h3>
+      <p>Elétrica, Segurança e Automação</p>
+      <p>Atendimento de segunda a sábado, 08h às 18h.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script> <!-- Importa o JavaScript que gera os produtos dinamicamente -->
+</body>
+</html>

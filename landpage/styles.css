@@ -1,0 +1,240 @@
+:root{ /* Início das variáveis globais de tema (cores da identidade visual) */
+  --brand:#00bfa6;   /* Cor principal (teal/verde-água) usada em botões e destaques */
+  --brand-2:#00897b; /* Tom mais escuro da cor principal (usado em hover/variações) */
+  --accent:#ffffff;  /* Branco de alto contraste (textos e elementos sobre fundo escuro) */
+  --bg:#000000;      /* Cor de fundo geral do site (preto) */
+  --text:#f5f5f5;    /* Cor padrão do texto (cinza claro para boa leitura no fundo escuro) */
+  --muted:#9ca3af;   /* Cor para textos secundários/descritivos */
+  --border:#333333;  /* Cor base de bordas e divisores (cinza escuro) */
+  --card:#111111;    /* Fundo de cartões/caixas (preto um pouco mais claro que o fundo) */
+} /* Fim das variáveis de tema */
+
+/* Reset e base tipográfica */
+*{box-sizing:border-box} /* Inclui padding e borda no cálculo total do tamanho, facilita layout */
+
+html,body{ /* Define estilo base para o documento e corpo */
+  margin:0; /* Remove margens padrão do navegador */
+  padding:0; /* Remove paddings padrão do navegador */
+  font-family:'Montserrat', sans-serif; /* Fonte moderna e legível */
+  color:var(--text); /* Cor padrão do texto (cinza claro) */
+  background:var(--bg); /* Fundo preto global */
+}
+
+/* Container centralizador do conteúdo principal */
+.container{
+  width:min(1100px,92%); /* Ocupa até 1100px ou 92% da tela, o que for menor */
+  margin:0 auto; /* Centraliza horizontalmente */
+}
+
+/* Topbar (cabeçalho fixo no topo) */
+.topbar{
+  position:sticky; /* Mantém fixo no topo ao rolar a página */
+  top:0; /* Encosta no topo */
+  z-index:10; /* Garante que fique acima de outros elementos */
+  background:#000; /* Fundo preto sólido para o cabeçalho */
+  border-bottom:2px solid var(--brand); /* Linha inferior com a cor da marca */
+  display:flex; /* Usa flexbox para alinhar conteúdo interno */
+  align-items:center; /* Alinha itens verticalmente ao centro */
+  justify-content:space-between; /* Espaça logo à esquerda e menu à direita */
+  padding:12px 4%; /* Respiro interno (vertical 12px, horizontal 4% da largura) */
+}
+
+/* Logo no cabeçalho */
+.logo img{
+  filter: drop-shadow(0 0 6px var(--brand)); /* Brilho suave na logo combinando com a cor da marca */
+}
+
+/* Navegação (links do menu) */
+.nav a{
+  margin:0 10px; /* Espaço horizontal entre links */
+  padding:8px 12px; /* Área clicável maior (conforto) */
+  border-radius:8px; /* Cantos arredondados */
+  color:var(--accent); /* Texto branco sobre fundo escuro */
+  text-decoration:none; /* Remove sublinhado padrão dos links */
+}
+.nav a.active{
+  background:var(--brand); /* Link ativo com fundo na cor da marca */
+  color:#000; /* Texto preto para contraste no fundo teal */
+}
+
+/* Seção de destaque (banner/hero) */
+.hero{
+  position:relative; /* Permite posicionar o texto sobre a imagem */
+  border-radius:14px; /* Cantos arredondados do bloco do banner */
+  overflow:hidden; /* Corta qualquer conteúdo que escapar das bordas arredondadas */
+  margin:18px 0; /* Espaço acima e abaixo do banner */
+  background:var(--card); /* Cor de fundo caso a imagem não carregue */
+}
+.hero img{
+  width:100%; /* Faz a imagem ocupar toda a largura do container */
+  height:280px; /* Altura fixa do banner (ajuste conforme seu design) */
+  object-fit:cover; /* Corta/ajusta a imagem para cobrir a área sem distorcer */
+  display:block; /* Remove espaçamento indesejado de imagens inline */
+  filter:contrast(1.05) saturate(1.05); /* Realce sutil de contraste/saturação da imagem */
+}
+.hero-text{
+  position:absolute; /* Posiciona o texto sobre a imagem */
+  inset:auto 0 0 0; /* Cola o bloco na parte inferior (bottom:0; left:0; right:0) */
+  padding:18px 20px; /* Respiro interno ao redor do texto */
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.5)); /* Degradê para legibilidade do texto */
+  color:#fff; /* Garante texto branco no banner */
+}
+.hero-text h1{
+  margin:0 0 6px 0; /* Remove margem superior e reduz inferior */
+  text-shadow:0 0 8px var(--brand); /* Brilho/sombra na cor da marca para destacar o título */
+}
+
+/* Botões (estilo base) */
+.btn{
+  display:inline-block; /* Permite padding e dimensões customizadas */
+  border:1px solid var(--border); /* Borda discreta */
+  padding:10px 14px; /* Tamanho confortável do botão */
+  border-radius:10px; /* Cantos arredondados */
+  background:#fff; /* Fundo branco padrão do botão neutro */
+  color:#000; /* Texto preto no botão neutro */
+  text-decoration:none; /* Remove sublinhado em links que viram botão */
+  cursor:pointer; /* Mostra o cursor de clique */
+  transition:transform .15s ease; /* Transição suave no hover (efeito de “levantar”) */
+}
+.btn:hover{
+  transform:translateY(-1px); /* Efeito sutil de levantar ao passar o mouse */
+}
+.btn-primary{
+  background:var(--brand); /* Fundo na cor da marca para botão primário */
+  color:#000; /* Texto preto para bom contraste */
+  border-color:var(--brand); /* Borda segue a cor do fundo */
+}
+
+/* Grade de cards (lista de produtos em cards) */
+.grid{
+  display:grid; /* Layout em grade */
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); /* Cria colunas fluidas a partir de 220px cada */
+  gap:14px; /* Espaçamento entre os cards */
+}
+.card{
+  background:var(--card); /* Fundo escuro do card */
+  border:1px solid var(--border); /* Borda sutil para separar do fundo */
+  border-radius:12px; /* Cantos arredondados */
+  overflow:hidden; /* Garante que conteúdo respeite os cantos arredondados */
+  display:flex; /* Flex para organizar conteúdo verticalmente */
+  flex-direction:column; /* Empilha: imagem em cima, textos/ações abaixo */
+}
+.card .thumb{
+  height:160px; /* Altura do espaço da imagem do produto */
+  display:flex; /* Centraliza a imagem */
+  align-items:center; /* Alinha verticalmente a imagem */
+  justify-content:center; /* Alinha horizontalmente a imagem */
+  background:var(--bg); /* Fundo igual ao do site para destacar o produto */
+  border-bottom:1px solid var(--border); /* Linha separando imagem do conteúdo */
+}
+.card img{
+  max-width:85%; /* Limita a largura da imagem dentro do thumb */
+  max-height:85%; /* Limita a altura da imagem para não “estourar” o box */
+}
+.card .content{
+  padding:12px; /* Respiro interno para textos e botões */
+}
+.price{
+  font-weight:700; /* Deixa o preço em negrito */
+  color:var(--brand); /* Realça o preço com a cor da marca */
+}
+
+/* Barra de filtros e controles */
+.filters{
+  display:flex; /* Layout em linha para os filtros */
+  gap:10px; /* Espaço entre cada filtro */
+  flex-wrap:wrap; /* Permite quebrar linha em telas menores */
+  margin:10px 0 16px; /* Espaçamento externo (cima e baixo) */
+}
+.filters input,.filters select{
+  padding:10px; /* Área interna para toque confortável */
+  border:1px solid var(--border); /* Borda sutil */
+  border-radius:10px; /* Cantos arredondados */
+  min-width:180px; /* Largura mínima para não ficar apertado */
+  background:#000; /* Fundo escuro para combinar com o tema */
+  color:var(--text); /* Texto claro para legibilidade */
+}
+
+/* Abas (Catálogo/Tabela) */
+.tabs{
+  display:flex; /* Coloca botões de abas lado a lado */
+  gap:8px; /* Espaço entre abas */
+  margin:10px 0 16px; /* Espaçamento externo */
+}
+.tab-button{
+  border:1px solid var(--border); /* Borda para delimitar a aba */
+  background:#000; /* Fundo escuro padrão (inativa) */
+  padding:10px 12px; /* Tamanho do botão da aba */
+  border-radius:10px; /* Cantos arredondados */
+  cursor:pointer; /* Cursor de clique */
+  color:var(--text); /* Texto claro */
+  transition: background .15s ease, color .15s ease, border-color .15s ease; /* Transições suaves ao ativar */
+}
+.tab-button.active{
+  background:var(--brand); /* Aba ativa com cor da marca */
+  color:#000; /* Texto escuro para contraste */
+  border-color:var(--brand); /* Borda harmoniza com o fundo */
+}
+/* Controle de visibilidade das abas */
+.tab{display:none;} /* Esconde conteúdo de aba por padrão */
+.tab.active{display:block;} /* Mostra somente a aba ativa */
+
+/* Tabela (visão tabular dos produtos) */
+.table-wrapper{
+  overflow:auto; /* Permite rolagem horizontal se a tabela ficar maior que a tela */
+  border:1px solid var(--border); /* Moldura da tabela */
+  border-radius:12px; /* Cantos arredondados do contêiner da tabela */
+}
+.table{
+  width:100%; /* Tabela usa toda a largura disponível */
+  border-collapse:collapse; /* Remove espaçamento interno entre células/bordas duplas */
+}
+.table th,.table td{
+  padding:12px; /* Respiro nas células */
+  border-bottom:1px solid var(--border); /* Linha separando linhas da tabela */
+  text-align:left; /* Alinhamento de texto à esquerda */
+}
+.table th{
+  background:var(--card); /* Cabeçalho com fundo escuro para destacar */
+}
+
+/* Página de produto (detalhes) */
+.product-detail{
+  display:grid; /* Grid para dividir imagem e informações */
+  grid-template-columns:1fr 1fr; /* Duas colunas iguais (imagem | info) */
+  gap:24px; /* Espaço entre as colunas */
+  margin:16px 0; /* Espaço vertical externo */
+}
+.product-detail .big-thumb{
+  background:var(--card); /* Fundo da área da imagem grande */
+  border:1px solid var(--border); /* Borda sutil ao redor */
+  border-radius:12px; /* Cantos arredondados */
+  display:flex; /* Centraliza a imagem dentro da área */
+  align-items:center; /* Centralização vertical */
+  justify-content:center; /* Centralização horizontal */
+  height:360px; /* Altura fixa do box da imagem grande */
+}
+.product-detail img{
+  max-width:90%; /* Impede que a imagem ultrapasse a área */
+  max-height:90%; /* Mantém proporção e evita overflow vertical */
+}
+
+/* Rodapé (informações de contato e serviços) */
+.footer{
+  margin-top:30px; /* Espaço antes do rodapé */
+  border-top:1px solid var(--border); /* Divisor superior */
+  background:#000; /* Fundo preto para manter identidade */
+  display:grid; /* Usa grid para colunas do rodapé */
+  grid-template-columns:1fr 1fr; /* Duas colunas iguais (contato | serviços) */
+  gap:20px; /* Espaço entre colunas */
+  padding:20px; /* Respiro interno geral */
+}
+.footer h3{
+  margin:8px 0; /* Espaço ao redor do título da seção */
+  color:var(--brand); /* Títulos do rodapé com cor da marca */
+}
+
+/* Responsividade (telas menores) */
+@media (max-width:860px){ /* Aplica estilos quando a tela tem 860px ou menos */
+  .product-detail{grid-template-columns:1fr;} /* Troca a página de produto para uma coluna (empilha imagem e info) */
+}

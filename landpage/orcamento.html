@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="utf-8" /> <!-- Suporte a acentos e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Faz a página ser responsiva em celulares -->
+  <title>Solicitar Orçamento — EleckIO</title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Importa o CSS principal -->
+  <link rel="icon" href="img/logo-eleckio.png" /> <!-- Ícone da aba do navegador -->
+</head>
+<body>
+  <!-- Cabeçalho fixo no topo -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="img/logo-eleckio.png" alt="EleckIO" height="48"> <!-- Logo da empresa -->
+    </div>
+    <nav class="nav"> <!-- Menu de navegação -->
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <!-- Banner da página de orçamento -->
+    <section class="hero">
+      <img src="img/banner-orcamento.png" alt="Solicite seu orçamento" /> <!-- Imagem do banner -->
+      <div class="hero-text">
+        <h1>Solicite seu orçamento</h1> <!-- Título principal -->
+        <p>Preencha seus dados e entraremos em contato.</p> <!-- Subtítulo -->
+      </div>
+    </section>
+
+    <!-- Formulário de orçamento -->
+    <section class="form-section">
+      <form id="orcamento-form" class="form-card"> <!-- Formulário com id para manipulação no JS -->
+        
+        <label for="nome">Nome completo:</label> <!-- Rótulo do campo nome -->
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" /> <!-- Campo de texto obrigatório -->
+
+        <label for="telefone">Telefone/WhatsApp:</label> <!-- Rótulo do campo telefone -->
+        <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx" /> <!-- Campo de telefone obrigatório -->
+
+        <button type="submit" class="btn btn-primary">Enviar</button> <!-- Botão de envio -->
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé com informações de contato -->
+  <footer class="footer">
+    <div class="footer-col">
+      <h3>Contato</h3>
+      <p><strong>Endereço:</strong> Rua Fictícia, 9999, centro</p>
+      <p><strong>Telefone:</strong> 16 99999-9999</p>
+      <p><strong>E-mail:</strong> eleckio@eleckio.com.br</p>
+      <p><strong>WhatsApp:</strong> (16) 98808-1614</p>
+    </div>
+    <div class="footer-col">
+      <h3>Serviços</h3>
+      <p>Elétrica, Segurança e Automação</p>
+      <p>Atendimento de segunda a sábado, 08h às 18h.</p>
+    </div>
+  </footer>
+
+  <!-- Script para tratar o envio do formulário -->
+  <script>
+    // Captura o formulário pelo ID
+    document.getElementById('orcamento-form').addEventListener('submit', function(e){
+      e.preventDefault(); // Impede o envio padrão (recarregar a página)
+
+      // Pega os valores digitados
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+
+      // Mostra uma mensagem de confirmação
+      alert(`Obrigado, ${nome}! Recebemos seu pedido de orçamento. Entraremos em contato no número ${telefone}.`);
+
+      // Limpa os campos do formulário
+      this.reset();
+    });
+  </script>
+</body>
+</html>

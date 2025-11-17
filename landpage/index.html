@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Declara que este documento usa HTML5 -->
+<html lang="pt-br" data-page="home"> <!-- Início do HTML, define idioma pt-BR e marca esta página como 'home' para o script.js -->
+<head>
+  <meta charset="utf-8" /> <!-- Usa UTF-8 para suportar acentos e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Ajusta a escala em dispositivos móveis (responsivo) -->
+  <title>EleckIO — Sua loja de eletricistas</title> <!-- Título exibido na aba do navegador -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Importa os estilos visuais do site -->
+  <link rel="icon" href="img/logo-eleckio.png" /> <!-- Ícone (favicon) que aparece na aba do navegador -->
+  <!-- Opcional: fonte moderna (caso ainda não tenha adicionado no projeto)
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet"> -->
+</head>
+<body> <!-- Corpo do documento (tudo que é visível na página) -->
+
+  <!-- Cabeçalho fixo com logo e navegação -->
+  <header class="topbar"> <!-- Barra superior fixa -->
+    <div class="logo"> <!-- Área da logomarca -->
+      <img src="img/logo-eleckio.png" alt="EleckIO" height="48"> <!-- Imagem da logo com altura definida -->
+    </div>
+    <nav class="nav"> <!-- Menu de navegação principal -->
+      <a href="index.html" class="active">Início</a> <!-- Link para a própria Home (marcado como ativo) -->
+      <a href="produtos.html">Produtos</a> <!-- Link para a página de produtos -->
+      <a href="#contato">Contato</a> <!-- Link âncora que rola até o rodapé (contato) -->
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal da Home -->
+  <main class="container"> <!-- Container centralizado para limitar a largura -->
+    <!-- Seção do banner (hero) com imagem e texto sobreposto -->
+    <section class="hero"> <!-- Bloco visual de destaque -->
+      <img src="img/banner.png" alt="EleckIO - Ferramentas e materiais elétricos" /> <!-- Imagem do banner da Home -->
+      <div class="hero-text"> <!-- Texto que aparece sobre a imagem (posicionado via CSS) -->
+        <h1>Profissionalismo em cada conexão</h1> <!-- Slogan principal -->
+        <p>Ferramentas, materiais elétricos e suporte para quem faz acontecer.</p> <!-- Subtítulo de apoio -->
+        <a class="btn btn-primary" href="produtos.html">Explorar produtos</a> <!-- Botão que leva ao catálogo -->
+      </div>
+    </section>
+
+    <!-- Seção de destaques da semana (produtos em evidência) -->
+    <section class="highlights"> <!-- Bloco para produtos em destaque -->
+      <h2>Destaques da semana</h2> <!-- Título da seção de destaques -->
+      <div id="featured-grid" class="grid"></div> <!-- Grade vazia; o script.js insere 4 produtos aqui -->
+    </section>
+  </main>
+
+  <!-- Rodapé com informações institucionais e de contato -->
+  <footer id="contato" class="footer"> <!-- Rodapé; id usado pelo link âncora do menu -->
+    <div class="footer-col"> <!-- Primeira coluna do rodapé -->
+      <h3>Contato</h3> <!-- Título da coluna -->
+      <p><strong>Endereço:</strong> Rua Fictícia, 9999, centro</p> <!-- Endereço comercial -->
+      <p><strong>Telefone:</strong> 16 99999-9999</p> <!-- Telefone fixo/celular -->
+      <p><strong>E-mail:</strong> eleckio@eleckio.com.br</p> <!-- E-mail de contato -->
+      <p><strong>WhatsApp:</strong> (16) 98808-1614</p> <!-- WhatsApp para atendimento -->
+    </div>
+    <div class="footer-col"> <!-- Segunda coluna do rodapé -->
+      <h3>Serviços</h3> <!-- Título da coluna -->
+      <p>Elétrica, Segurança e Automação</p> <!-- Escopo dos serviços oferecidos -->
+      <p>Atendimento de segunda a sábado, 08h às 18h.</p> <!-- Horário de atendimento -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script> <!-- Script responsável por renderizar destaques e interações da página -->
+</body>
+</html>
