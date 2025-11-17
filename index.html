@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="cabecalho-com-imagem">
+      <img src="Media/cartao visita.png" alt="Logo ELECK18" class="logo-cabecalho" />
+      <h1 class="titulo-sobre-imagem">Projeto Abas</h1>
+    </div>
+
+
+    <!-- Abas -->
+    <div class="tabs">
+      <button class="tab active" data-aba="dadosPessoais">Dados Pessoais</button>
+      <button class="tab" data-aba="dadosEstudantis">Dados Estudantis</button>
+      <button class="tab" data-aba="carrossel_triplo">Carrossel Triplo</button>
+      <button class="tab" data-aba="carrossel_unico">Carrossel Unico</button>
+      <button class="tab" data-aba="tabela_dinamica">Tabela Dinâmica</button>
+      <button class="tab" data-aba="grafico">Grafico</button>
+      <button class="tab" data-aba="localizacao">Localização</button>
+      <button class="tab" data-aba="cadastro">Cadastro Postal</button>
+    </div>
+
+    <!-- Aba: Dados Pessoais -->
+<form id="dadosPessoais" class="aba ativa">
+  <label for="nome">Nome:
+    <input type="text" id="nome" name="nome" required />
+  </label>
+
+  <div class="linha-flex">
+    <label>Data de Nasc.:
+      <input type="text" name="dataNascimento" required />
+    </label>
+    <label>RG:
+      <input type="text" name="rg" />
+    </label>
+    <label>Órgão Emissor:
+      <input type="text" name="orgaoEmissor" />
+    </label>
+    <label>Data de Emissão:
+      <input type="text" name="dataEmissao" />
+    </label>
+    <label>CPF:
+      <input type="text" name="cpf" required />
+    </label>
+  </div>
+
+  <label>Nome do Pai:
+    <input type="text" name="nomePai" />
+  </label>
+  <label>Nome da Mãe:
+    <input type="text" name="nomeMae" />
+  </label>
+
+  <!-- CEP agora sozinho -->
+  <label class="campo-cep">CEP:
+    <input type="text" name="cep" />
+  </label>
+
+  <!-- Linha Rua + Número + Complemento -->
+  <div class="linha-rua-numero">
+    <label class="campo-rua">Rua:
+      <input type="text" name="rua" />
+    </label>
+    <label class="campo-numero">Número:
+      <input type="text" name="numero" />
+    </label>
+    <label class="campo-complemento">Complemento:
+      <input type="text" name="complemento"/>
+    </label>
+  </div>
+
+  <!-- Linha Bairro + Cidade + Estado -->
+  <div class="linha-endereco">
+    <label class="campo-bairro">Bairro:
+      <input type="text" name="bairro" />
+    </label>
+    <label class="campo-cidade">Cidade:
+      <input type="text" name="cidade" />
+    </label>
+    <label class="campo-estado">Estado:
+      <input type="text" name="estado" />
+    </label>
+  </div>
+
+  <div class="linha-telefones">
+    <label class="campo-fixo">Telefone Fixo:
+      <input type="tel" name="telResidencial" />
+    </label>
+    <label class="campo-celular">Telefone Celular:
+      <input type="tel" name="telCelular" />
+    </label>
+  </div>
+
+  <label>E-mail:
+    <input type="email" name="email" required />
+  </label>
+
+  <button type="submit">Enviar Cadastro</button>
+</form>
+
+    <!-- Mensagem de sucesso -->
+    <p id="mensagemSucesso" class="">Cadastro realizado com sucesso!</p>
+
+
+    <!-- Aba: Dados Estudantis -->
+    <form id="dadosEstudantis" class="aba">
+      <h2>Ensino Infantil</h2>
+      <div class="bloco-estudo">
+        <label>Nome da Instituição:
+          <input type="text" name="infantilNome" />
+        </label>
+        <div class="linha-endereco-telefone">
+          <label class="campo-endereco">Endereço:
+            <input type="text" name="infantilEndereco" />
+          </label>
+          <label class="campo-telefone">Telefone:
+            <input type="tel" name="infantilTelefone" />
+          </label>
+        </div>
+        <div class="linha-estudo">
+          <label>N° Matrícula:
+            <input type="text" name="infantilMatricula" />
+          </label>
+          <label>Data Inicial:
+            <input type="text" name="infantilDataInicial" />
+          </label>
+          <label>Data Final:
+            <input type="text" name="infantilDataFinal" />
+          </label>
+          <label>Turno:
+            <select name="infantilTurno">
+              <option value="">Selecione</option>
+              <option value="manhã">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+              <option value="integral">Integral</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <h2>Ensino Fundamental</h2>
+      <div class="bloco-estudo">
+        <label>Nome da Instituição:
+          <input type="text" name="fundamentalNome" />
+        </label>
+        <div class="linha-endereco-telefone">
+          <label class="campo-endereco">Endereço:
+            <input type="text" name="fundamentalEndereco" />
+          </label>
+          <label class="campo-telefone">Telefone:
+            <input type="tel" name="fundamentalTelefone" />
+          </label>
+        </div>
+
+        <div class="linha-estudo">
+          <label>N° Matrícula:
+            <input type="text" name="fundamentalMatricula" />
+          </label>
+          <label>Data Inicial:
+            <input type="text" name="fundamentalDataInicial" />
+          </label>
+          <label>Data Final:
+            <input type="text" name="fundamentalDataFinal" />
+          </label>
+          <label>Turno:
+            <select name="fundamentalTurno">
+              <option value="">Selecione</option>
+              <option value="manhã">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+              <option value="integral">Integral</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <h2>Ensino Médio</h2>
+      <div class="bloco-estudo">
+        <label>Nome da Instituição:
+          <input type="text" name="medioNome" />
+        </label>
+        <div class="linha-endereco-telefone">
+          <label class="campo-endereco">Endereço:
+            <input type="text" name="medioEndereco" />
+          </label>
+          <label class="campo-telefone">Telefone:
+            <input type="tel" name="medioTelefone" />
+          </label>
+        </div>
+        <div class="linha-estudo">
+          <label>N° Matrícula:
+            <input type="text" name="medioMatricula" />
+          </label>
+          <label>Data Inicial:
+            <input type="text" name="medioDataInicial" />
+          </label>
+          <label>Data Final:
+            <input type="text" name="medioDataFinal" />
+          </label>
+          <label>Turno:
+            <select name="medioTurno">
+              <option value="">Selecione</option>
+              <option value="manhã">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+              <option value="integral">Integral</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <h2>Ensino Superior</h2>
+      <div class="bloco-estudo">
+        <label>Nome da Instituição:
+          <input type="text" name="superiorNome" />
+        </label>
+        <div class="linha-endereco-telefone">
+          <label class="campo-endereco">Endereço:
+            <input type="text" name="superiorEndereco" />
+          </label>
+          <label class="campo-telefone">Telefone:
+            <input type="tel" name="superiorTelefone" />
+          </label>
+        </div>
+        <label>Curso:
+          <input type="text" name="superiorCurso" />
+        </label>
+
+        <div class="linha-estudo">
+          <label>N° Matrícula:
+            <input type="text" name="superiorMatricula" />
+          </label>
+          <label>Data Inicial:
+            <input type="text" name="superiorDataInicial" />
+          </label>
+          <label>Data Final:
+            <input type="text" name="superiorDataFinal" />
+          </label>
+          <label>Turno:
+            <select name="superiorTurno">
+              <option value="">Selecione</option>
+              <option value="manhã">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+              <option value="integral">Integral</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit">Salvar Dados Estudantis</button>
+    </form>
+    <form id="carrossel_triplo" class="aba">
+
+      <iframe src="carrossel/carrossel_triplo/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+    <form id="carrossel_unico" class="aba">
+
+      <iframe src="carrossel/carrossel_unico/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+    <form id="ficha_cadastro_postal" class="aba">
+
+      <iframe src="ficha_cadastro_postal/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+    <form id="tabela_dinamica" class="aba">
+
+      <iframe src="Tabela_dinamica_rev4/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+    <form id="grafico" class="aba">
+
+      <iframe src="grafico/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+    <form id="localizacao" class="aba">
+
+      <iframe src="mapa/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+    <form id="cadastro" class="aba">
+
+      <iframe src="ficha_cadastro_postal/index.html" width="100%" height="700px" style="border: none;"></iframe>
+
+    </form>
+  </div>
+
+
+  <!-- Biblioteca Inputmask -->
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+  <!-- Seu script -->
+  <script src="script.js"></script>
+</body>
+</html>

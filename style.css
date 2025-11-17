@@ -1,0 +1,331 @@
+:root{
+      --brand-bg: #000000;       /* fundo principal */
+      --brand-fg: #00f7ff;       /* texto/contraste */
+      --brand-muted: #4c4f4f;    /* acentos/bordas */
+      --brand-soft: #c4c4c4;     /* superfícies suaves */
+    }
+/* ===== Reset e base ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--brand-bg);
+  color: var(--brand-fg);
+  
+}
+
+/* ===== Container principal ===== */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--brand-muted);
+  
+}
+
+
+/* ===== Cabeçalho com imagem ===== */
+.cabecalho-com-imagem {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.logo-cabecalho {
+  width: 100%;
+  max-height: 100px; /* aumentada para dar mais espaço */
+  /*object-fit: contain;   /*preserva proporção sem cortar */
+  display: block;
+  filter: brightness(0.7); /* opcional para contraste */
+  border-radius: 8px;
+}
+
+.titulo-sobre-imagem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+  margin: 0;
+  z-index: 1;
+}
+
+/* ===== Abas ===== */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 0 0 auto;
+  padding: 10px 9px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.tab.active {
+   background-color: var(--brand-fg);
+  color: black;
+}
+
+.tab:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* ===== Formulários ===== */
+form {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-color: #000000;
+  text-shadow: 2px 2px 4px #000000;
+ 
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Destaque ao focar */
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Botão de envio */
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Controle de visibilidade das abas ===== */
+.aba {
+  display: none;
+}
+
+.aba.ativa {
+  display: block;
+}
+
+/* ===== Scrollbar das abas  ===== */
+.tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* ===== Linha flexível para múltiplos campos ===== */
+.linha-flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.linha-flex label {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* ===== Rua + Número + Complemento ===== */
+.linha-rua-numero {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.campo-rua {
+  flex: 2.5 1 0;
+}
+
+.campo-numero {
+  flex: 0.5 1 0;
+}
+
+.campo-complemento {
+  flex: 1 1 0;
+}
+
+/* ===== Bairro + CEP + Cidade + Estado ===== */
+.linha-endereco {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.campo-bairro {
+  flex: 2 1 0;
+}
+
+.campo-cep {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 110px;
+}
+
+.campo-cep input {
+  width: 100%;
+}
+
+.campo-cidade {
+  flex: 2 1 0;
+}
+
+.campo-estado {
+  flex: 1 1 0;
+}
+
+/* ===== Telefones lado a lado ===== */
+.linha-telefones {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.linha-telefones label {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ===== Mensagem de sucesso ===== */
+#mensagemSucesso {
+  display: none;
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#mensagemSucesso.visivel {
+  display: block;
+  opacity: 1;
+}
+
+/* ===== Blocos de dados estudantis ===== */
+.bloco-estudo {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: var(--brand-soft);
+}
+
+.bloco-estudo label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.bloco-estudo input,
+.bloco-estudo select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+/* Endereço + Telefone na mesma linha */
+.linha-endereco-telefone {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.campo-endereco {
+  flex: 2 1 0;
+}
+
+.campo-telefone {
+  flex: 1 1 0;
+}
+
+/* Linha com matrícula, datas e turno */
+.linha-estudo {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.linha-estudo label {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 500px) {
+  .linha-rua-numero .campo-rua,
+  .linha-rua-numero .campo-numero,
+  .linha-rua-numero .campo-complemento,
+  .linha-endereco .campo-bairro,
+  .linha-endereco .campo-cep,
+  .linha-endereco .campo-cidade,
+  .linha-endereco .campo-estado,
+  .linha-telefones label,
+  .linha-estudo label,
+  .linha-endereco-telefone .campo-endereco,
+  .linha-endereco-telefone .campo-telefone {
+    flex: 1 1 100%;
+  }
+}
+.iframe{
+  overflow: hidden
+}

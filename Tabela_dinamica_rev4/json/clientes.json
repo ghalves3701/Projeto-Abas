@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "nome": "Caio Rodrigues",
+    "telefone": "+55 81 0275 9457",
+    "endereco": "Largo Ester Peixoto, Vila Das Oliveiras, 32629895 Mendonça / PR",
+    "data_nascimento": "11/05/1951",
+    "cpf": "283.016.749-03",
+    "rg": "203865479",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "nome": "Apollo Vargas",
+    "telefone": "+55 84 9563 8856",
+    "endereco": "Alameda Lima, 40, Serra Verde, 82112994 das Neves da Praia / RR",
+    "data_nascimento": "11/04/1986",
+    "cpf": "037.952.861-40",
+    "rg": "031862573",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "nome": "Bryan da Cunha",
+    "telefone": "+55 41 1037-8896",
+    "endereco": "Área Costela, 13, Gameleira, 86214856 Monteiro / AC",
+    "data_nascimento": "11/06/1951",
+    "cpf": "753.891.062-02",
+    "rg": "805246137",
+    "ativo": true
+  },
+  {
+    "id": 4,
+    "nome": "Enzo Sales",
+    "telefone": "+55 (011) 0090-6827",
+    "endereco": "Travessa Gustavo Monteiro, Vila Nova Gameleira 2ª Seção, 40503440 Teixeira / MG",
+    "data_nascimento": "23/11/1996",
+    "cpf": "269.408.735-38",
+    "rg": "087361425",
+    "ativo": false
+  },
+  {
+    "id": 5,
+    "nome": "Clarice Guerra",
+    "telefone": "+55 (011) 4332 5677",
+    "endereco": "Feira Novaes, 6, Gameleira, 58000895 Melo Verde / RR",
+    "data_nascimento": "28/12/1991",
+    "cpf": "968.120.745-94",
+    "rg": "537084216",
+    "ativo": true
+  },
+  {
+    "id": 6,
+    "nome": "Srta. Ana Clara Carvalho",
+    "telefone": "0300 311 4732",
+    "endereco": "Núcleo Maria Júlia Machado, 206, Universo, 27833977 Carvalho / TO",
+    "data_nascimento": "03/08/1974",
+    "cpf": "217.465.390-70",
+    "rg": "570134869",
+    "ativo": true
+  },
+  {
+    "id": 7,
+    "nome": "Nicolas Martins",
+    "telefone": "+55 84 7258 7141",
+    "endereco": "Travessa João Lucas Almeida, 57, Penha, 55348-857 Correia das Flores / SE",
+    "data_nascimento": "01/01/1949",
+    "cpf": "841.073.629-22",
+    "rg": "483206179",
+    "ativo": true
+  },
+  {
+    "id": 8,
+    "nome": "Maria Cecília Martins",
+    "telefone": "+55 (071) 8582-3496",
+    "endereco": "Chácara Levi Lopes, 94, Barro Preto, 62272768 da Rocha Grande / AC",
+    "data_nascimento": "25/01/2004",
+    "cpf": "039.871.452-50",
+    "rg": "537642109",
+    "ativo": true
+  },
+  {
+    "id": 9,
+    "nome": "Ravi Lucca Barros",
+    "telefone": "41 9427-1467",
+    "endereco": "Condomínio Heloísa Oliveira, 94, Guarani, 69994271 Araújo de Vargas / MG",
+    "data_nascimento": "23/05/1944",
+    "cpf": "857.163.902-77",
+    "rg": "610534877",
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "nome": "Luiz Otávio Teixeira",
+    "telefone": "0300-033-8323",
+    "endereco": "Estação Kamilly Barbosa, 14, Alípio De Melo, 58531481 Teixeira da Mata / ES",
+    "data_nascimento": "07/10/1969",
+    "cpf": "542.967.081-20",
+    "rg": "401582760",
+    "ativo": true
+  },
+  {
+    "id": 11,
+    "nome": "Dr. Josué Fernandes",
+    "telefone": "+55 84 0741 4709",
+    "endereco": "Chácara Jade Cunha, 4, Estrela Do Oriente, 73981400 Novaes / AL",
+    "data_nascimento": "11/12/1957",
+    "cpf": "604.937.185-75",
+    "rg": "542836014",
+    "ativo": true
+  },
+  {
+    "id": 12,
+    "nome": "Yasmin da Mata",
+    "telefone": "(084) 2913-8376",
+    "endereco": "Viela de Pacheco, 20, Jatobá, 18246302 Correia / SP",
+    "data_nascimento": "22/06/1953",
+    "cpf": "329.180.476-78",
+    "rg": "150872367",
+    "ativo": true
+  },
+  {
+    "id": 13,
+    "nome": "Yan Pacheco",
+    "telefone": "(011) 7362 0781",
+    "endereco": "Condomínio Nogueira, 45, Cabana Do Pai Tomás, 17868-988 Costela de Minas / AC",
+    "data_nascimento": "02/02/1957",
+    "cpf": "395.476.210-25",
+    "rg": "763812407",
+    "ativo": true
+  },
+  {
+    "id": 14,
+    "nome": "Anthony Gabriel Alves",
+    "telefone": "+55 (061) 2902 6696",
+    "endereco": "Sítio de da Rosa, Suzana, 73750043 Machado do Oeste / CE",
+    "data_nascimento": "26/11/1970",
+    "cpf": "608.245.731-53",
+    "rg": "136854278",
+    "ativo": false
+  },
+  {
+    "id": 15,
+    "nome": "Amanda Almeida",
+    "telefone": "84 1551 8784",
+    "endereco": "Conjunto Luiz Fernando Pacheco, 351, Vila Cloris, 00842918 Barros / ES",
+    "data_nascimento": "16/11/1997",
+    "cpf": "704.319.658-20",
+    "rg": "162703843",
+    "ativo": true
+  },
+  {
+    "id": 16,
+    "nome": "Eloah Sousa",
+    "telefone": "(061) 2669 4856",
+    "endereco": "Loteamento Cassiano, 355, Santana Do Cafezal, 04375447 Moraes / RO",
+    "data_nascimento": "08/11/1938",
+    "cpf": "326.187.094-03",
+    "rg": "836150247",
+    "ativo": true
+  },
+  {
+    "id": 17,
+    "nome": "Raul Machado",
+    "telefone": "+55 31 1339-9931",
+    "endereco": "Pátio de Aragão, 27, Vila Nossa Senhora Do Rosário, 01224894 Moraes do Oeste / MS",
+    "data_nascimento": "12/08/1945",
+    "cpf": "982.741.350-32",
+    "rg": "048576323",
+    "ativo": true
+  },
+  {
+    "id": 18,
+    "nome": "Maitê Vasconcelos",
+    "telefone": "(031) 6863 7230",
+    "endereco": "Lago Antonella Lima, 88, Castelo, 34192-641 Montenegro de da Costa / MA",
+    "data_nascimento": "25/02/1998",
+    "cpf": "309.416.278-96",
+    "rg": "164538070",
+    "ativo": true
+  },
+  {
+    "id": 19,
+    "nome": "Rhavi Alves",
+    "telefone": "+55 (011) 1031 3884",
+    "endereco": "Trecho da Conceição, 9, Madri, 89389477 Câmara de Mendonça / AL",
+    "data_nascimento": "06/12/1944",
+    "cpf": "653.912.047-80",
+    "rg": "067158249",
+    "ativo": true
+  },
+  {
+    "id": 20,
+    "nome": "Caroline Lopes",
+    "telefone": "61 7146 9725",
+    "endereco": "Praça Juliana das Neves, 14, Marmiteiros, 88417-886 das Neves da Serra / SP",
+    "data_nascimento": "05/04/1995",
+    "cpf": "514.867.023-17",
+    "rg": "021457360",
+    "ativo": true
+  },
+  {
+    "id": 21,
+    "nome": "Ester Camargo",
+    "telefone": "+55 (084) 2279-4263",
+    "endereco": "Parque de Mendes, 26, Bela Vitoria, 81322720 Pires do Amparo / TO",
+    "data_nascimento": "28/10/1936",
+    "cpf": "895.261.743-64",
+    "rg": "360184522",
+    "ativo": true
+  },
+  {
+    "id": 22,
+    "nome": "Theo da Mota",
+    "telefone": "+55 (051) 8453 2941",
+    "endereco": "Feira Camargo, Santa Cecilia, 63110-140 Rocha de Cassiano / SE",
+    "data_nascimento": "23/12/2004",
+    "cpf": "450.738.129-05",
+    "rg": "436027811",
+    "ativo": true
+  },
+  {
+    "id": 23,
+    "nome": "Vitor Lopes",
+    "telefone": "0300-024-3616",
+    "endereco": "Campo de Cardoso, Vila Novo São Lucas, 64776810 Gomes da Mata / RN",
+    "data_nascimento": "30/10/1977",
+    "cpf": "406.189.357-20",
+    "rg": "528410374",
+    "ativo": true
+  },
+  {
+    "id": 24,
+    "nome": "Sophie Marques",
+    "telefone": "0500 945 6947",
+    "endereco": "Fazenda Henrique Novais, 76, Barro Preto, 75745-664 Aragão da Praia / ES",
+    "data_nascimento": "04/02/1943",
+    "cpf": "518.023.694-06",
+    "rg": "176082530",
+    "ativo": false
+  },
+  {
+    "id": 25,
+    "nome": "Juliana Moraes",
+    "telefone": "(011) 6337-9018",
+    "endereco": "Setor Yago Fernandes, 8, Nova Suíça, 23966227 Pastor / PA",
+    "data_nascimento": "22/03/1991",
+    "cpf": "953.247.016-61",
+    "rg": "356407810",
+    "ativo": true
+  },
+  {
+    "id": 26,
+    "nome": "Rodrigo Câmara",
+    "telefone": "51 3139 9584",
+    "endereco": "Esplanada Costa, 16, Embaúbas, 55543252 Araújo / SP",
+    "data_nascimento": "30/03/1953",
+    "cpf": "072.483.951-88",
+    "rg": "374506814",
+    "ativo": true
+  },
+  {
+    "id": 27,
+    "nome": "Hellena Viana",
+    "telefone": "(071) 0382 5091",
+    "endereco": "Via Cavalcante, 34, Vila Bandeirantes, 90419-826 Ramos / BA",
+    "data_nascimento": "10/06/2005",
+    "cpf": "390.821.574-97",
+    "rg": "185406725",
+    "ativo": true
+  },
+  {
+    "id": 28,
+    "nome": "Manuela Câmara",
+    "telefone": "+55 (071) 2811 1393",
+    "endereco": "Colônia Ramos, Bandeirantes, 33777251 Cavalcante de Silva / CE",
+    "data_nascimento": "23/03/1985",
+    "cpf": "039.251.867-86",
+    "rg": "562430714",
+    "ativo": true
+  },
+  {
+    "id": 29,
+    "nome": "Oliver Martins",
+    "telefone": "11 0770-6267",
+    "endereco": "Pátio de Souza, 29, São Bernardo, 98184-790 Viana da Serra / MA",
+    "data_nascimento": "24/10/1949",
+    "cpf": "486.721.390-03",
+    "rg": "683702518",
+    "ativo": true
+  },
+  {
+    "id": 30,
+    "nome": "Henry Casa Grande",
+    "telefone": "61 7321 1885",
+    "endereco": "Avenida da Mota, 7, Nova Cintra, 61137-975 Andrade / MT",
+    "data_nascimento": "05/09/1987",
+    "cpf": "460.782.931-50",
+    "rg": "516380722",
+    "ativo": true
+  },
+
+  {
+    "id": 31,
+    "nome": "Gustavo Carvalho",
+    "telefone": "0300-024-3616",
+    "endereco": "Campo de Cardoso, Vila Novo São Lucas, 64776810 Gomes da Mata / RN",
+    "data_nascimento": "30/10/1977",
+    "cpf": "406.189.357-20",
+    "rg": "528410374",
+    "ativo": true
+  }
+]

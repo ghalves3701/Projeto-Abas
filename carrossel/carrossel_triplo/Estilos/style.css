@@ -1,0 +1,172 @@
+ /* ======= Identidade visual baseada na logo ======= */
+    :root{
+      --brand-bg: #000000;       /* fundo principal */
+      --brand-fg: #00f7ff;       /* texto/contraste */
+      --brand-muted: #4c4f4f;    /* acentos/bordas */
+      --brand-soft: #c4c4c4;     /* superfícies suaves */
+    }
+
+    /* Reset e base */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--brand-bg);
+      color: var(--brand-fg);
+      line-height: 1.4;
+    }
+
+    /* Cabeçalho */
+    header{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem clamp(1rem, 4vw, 3rem);
+      border-bottom: 2px solid color-mix(in oklab, var(--brand-muted) 35%, white);
+      background: linear-gradient(180deg, #000000, #fafafa);
+    }
+  
+    header h1{
+      font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    main{
+      padding: clamp(1rem, 4vw, 3rem);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ======= Carrossel ======= */
+    .carousel{
+      position: relative;
+      overflow: hidden;
+      border: 1px solid color-mix(in oklab, var(--brand-muted) 30%, white);
+      border-radius: 12px;
+      background: var(--brand-soft);
+      padding: clamp(0.75rem, 2vw, 1rem);
+      /* sombra suave */
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+
+    /* Faixa deslizante (cada página ocupa 100%) */
+    .carousel-track{
+      display: flex;
+      width: 100%;
+      transform: translateX(0%);
+      transition: transform 500ms ease;
+      will-change: transform;
+    }
+
+    /* Página = conjunto de 3 imagens visíveis */
+    .carousel-page{
+      flex: 0 0 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(0.5rem, 1.8vw, 1rem);
+      align-items: stretch;
+    }
+
+    /* Cartão da imagem */
+    .card{
+      background: #fff;
+      border: 1px solid color-mix(in oklab, var(--brand-muted) 25%, white);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .card img{
+      width: 100%;
+      height: 220px;       /* ajuste se quiser outra altura */
+      object-fit: cover;   /* cobre sem distorcer */
+      display: block;
+      background: #eee;
+    }
+
+    .caption{
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      color: var(--brand-muted);
+      border-top: 1px solid color-mix(in oklab, var(--brand-muted) 20%, white);
+    }
+
+    /* Controles (opcionais – podem ser ocultados) */
+    .controls{
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn{
+      background: var(--brand-fg);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: filter 120ms ease, transform 120ms ease;
+    }
+    .btn:hover{ filter: brightness(1.1); transform: translateY(-1px); }
+    .btn:active{ transform: translateY(0); }
+
+    /* Responsividade – se quiser manter SEMPRE 3 por vez, pode remover estas regras */
+    @media (max-width: 900px){
+      .card img{ height: 190px; }
+    }
+    @media (max-width: 720px){
+      /* Mantém o layout, apenas reduz gap/altura */
+      .card img{ height: 160px; }
+    }
+  .card img {
+  width: 100%;
+  height: auto;
+  max-height: 120px; /* ou ajuste conforme necessário */
+  object-fit: contain;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-page {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    max-height: 100px;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+  }
+}

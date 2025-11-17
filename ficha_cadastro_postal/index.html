@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ficha de Cadastro Postal</title>
+  <meta name="description" content="Formulário de cadastro postal com validação, máscara e consulta de CEP (ViaCEP)." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>Ficha de Cadastro Postal</h1>
+
+    <form id="cadastroPostal" novalidate>
+      <!-- Bloco Geral -->
+      <fieldset class="section">
+        <legend>Dados da remessa</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="dataEntrada">Data de Entrada</label>
+            <input type="date" id="dataEntrada" name="dataEntrada" required />
+          </div>
+
+          <div class="field">
+            <label for="tipo">Tipo de Correspondência</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Selecione...</option>
+              <option>Carta</option>
+              <option>Pacote</option>
+              <option>Caixa</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" name="peso" step="0.001" inputmode="decimal" placeholder="0,000" min="0" />
+          </div>
+
+          <div class="field">
+            <label for="valorEntrega">Valor da Entrega (R$)</label>
+            <input type="text" id="valorEntrega" name="valorEntrega" inputmode="numeric" placeholder="R$ 0,00" />
+          </div>
+
+          <div class="field">
+            <label for="codigoRastreio">Código de Rastreio</label>
+            <input type="text" id="codigoRastreio" name="codigoRastreio" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="previsaoEntrega">Previsão de Entrega</label>
+            <input type="date" id="previsaoEntrega" name="previsaoEntrega" />
+          </div>
+
+          <div class="field field--full">
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Remetente -->
+      <div class="two-columns">
+        <fieldset class="section">
+          <legend>Remetente</legend>
+          <div class="grid">
+            <div class="field field--full">
+              <label for="nomeRemetente">Nome</label>
+              <input type="text" id="nomeRemetente" name="nome_remetente" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="cpfRemetente">CPF</label>
+              <input type="text" id="cpfRemetente" name="cpf_remetente" inputmode="numeric" maxlength="14" data-cpf />
+              <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="telRemetente">Telefone</label>
+              <input type="tel" id="telRemetente" name="tel_remetente" inputmode="tel" placeholder="(00) 00000-0000" data-mask="tel" />
+            </div>
+
+            <div class="field">
+              <label for="cepRemetente">CEP</label>
+              <input type="text" id="cepRemetente" name="cep_remetente" inputmode="numeric" placeholder="00000-000" maxlength="9" data-cep data-tipo="remetente" />
+            </div>
+
+            <div class="field field--full">
+              <label for="endRemetente">Endereço</label>
+              <input type="text" id="endRemetente" name="endereco_remetente" autocomplete="street-address" />
+            </div>
+
+            <div class="field">
+              <label for="numRemetente">Número</label>
+              <input type="text" id="numRemetente" name="numero_remetente" autocomplete="address-line2" />
+            </div>
+
+            <div class="field">
+              <label for="compRemetente">Complemento</label>
+              <input type="text" id="compRemetente" name="complemento_remetente" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Destinatário -->
+        <fieldset class="section">
+          <legend>Destinatário</legend>
+          <div class="grid">
+            <div class="field field--full">
+              <label for="nomeDest">Nome</label>
+              <input type="text" id="nomeDest" name="nome_destinatario" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="cpfDest">CPF</label>
+              <input type="text" id="cpfDest" name="cpf_destinatario" inputmode="numeric" maxlength="14" data-cpf />
+              <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="telDest">Telefone</label>
+              <input type="tel" id="telDest" name="tel_destinatario" inputmode="tel" placeholder="(00) 00000-0000" data-mask="tel" />
+            </div>
+
+            <div class="field">
+              <label for="cepDest">CEP</label>
+              <input type="text" id="cepDest" name="cep_destinatario" inputmode="numeric" placeholder="00000-000" maxlength="9" data-cep data-tipo="destinatario" />
+            </div>
+
+            <div class="field field--full">
+              <label for="endDest">Endereço</label>
+              <input type="text" id="endDest" name="endereco_destinatario" />
+            </div>
+
+            <div class="field">
+              <label for="numDest">Número</label>
+              <input type="text" id="numDest" name="numero_destinatario" />
+            </div>
+
+            <div class="field">
+              <label for="compDest">Complemento</label>
+              <input type="text" id="compDest" name="complemento_destinatario" />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="primary">Cadastrar</button>
+    </form>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
